@@ -19,6 +19,10 @@
       "title": "Error Solved...",
       "content": "Yesss... the error has solved, the error was in the yaml file which was creating new blogs instead of just adding date and time to the blogs. In my rush to see the blog, I overlooked the fact that GitHub takes some time to deploy and run changes. I mistakenly assumed that was part of the error but it was actually just the deployment delay.",
       "date": "2025-03-30T12:04:36.834Z"
+    },
+    {
+      "title": "Some Styling",
+      "content": "I have been working on styling for the ZBLOG for almost an hour now, and I have come up with some nice designs. Taking a break after working non-stop for 2 hours and 39 minutes (yes, I havve been keeping track with a stopwatch 😁)."
     }
   ]
 }
