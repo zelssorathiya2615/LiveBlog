@@ -3,35 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Live Blog</title>
+    <title>ZBlog</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=D-DIN&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>My Live Blog</h1>
+
+    <header id="Home">
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-            </ul>
+            <div class="nav-title">
+                <a href="#Home">ZBlog</a>
+            </div>
+            <div class="nav-sec">
+                <ul class="nav-links">
+                    <li><a href="#Home">HOME</a></li>
+                    <li><a href="#Blog">BLOG</a></li>
+                    <li><a href="#Contact">CONTACT</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
+
     <main>
-        <h2>Welcome to My Blog</h2>
-        <p>This is where you can find all my latest posts.</p>
-        <div>
-            <input type="text" id="search-title" placeholder="Search by title...">
-            <select id="search-date">
-                <option value="">Select Date</option>
-                <!-- Options will be dynamically generated here -->
-            </select>
-        </div>
-        <div id="blog-list">
-            <!-- Blog posts will be dynamically generated here -->
+        <section>
+            <p>Welcome to ZBLOG</p>
+            <div>
+                <input type="text" id="search-title" placeholder="Search by title...">
+                <select id="search-date">
+                    <option value="">Select Date</option>
+                    <!-- Options will be dynamically generated here -->
+                </select>
+            </div>
+        </section>
+
+        <section id="Blog">
+            <div id="blog-list">
+                <!-- Blog posts will be dynamically generated here -->
+                 
+            </div>
+        </section>
+
+        <div id="Contact">
+            <p>Get in touch with us</p>
+            
         </div>
     </main>
+    
     <footer>
-        <p>&copy; 2025 My Live Blog</p>
+        <p>&copy; 2024 ZELS</p>
     </footer>
-    <script src="js/script.js"></script>
+
 </body>
 </html>
