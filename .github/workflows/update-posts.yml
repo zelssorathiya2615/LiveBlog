@@ -1,0 +1,42 @@
+name: Update Blog Posts
+
+on:
+  push:
+    paths:
+      - 'blogs/posts.json'
+
+jobs:
+  update-posts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Update posts.json with current date and time
+        run: |
+          node -e '
+            const fs = require("fs");
+            const path = require("path");
+            const postsPath = path.join(__dirname, "blogs", "posts.json");
+            const posts = JSON.parse(fs.readFileSync(postsPath, "utf8"));
+            const newPost = {
+              title: "New Blog Post",
+              content: "This is the content of the new blog post.",
+              date: new Date().toISOString()
+            };
+            posts.posts.push(newPost);
+            fs.writeFileSync(postsPath, JSON.stringify(posts, null, 2), "utf8");
+          '
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add blogs/posts.json
+          git commit -m "Add new blog post with current date and time" || exit 0
+          git push
