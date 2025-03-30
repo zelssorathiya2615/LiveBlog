@@ -17,7 +17,8 @@
     },
     {
       "title": "Error Solved...",
-      "content": "Yesss... the error has solved, the error was in the yaml file which was creating new blogs instead of just adding date and time to the blogs. In my rush to see the blog, I overlooked the fact that GitHub takes some time to deploy and run changes. I mistakenly assumed that was part of the error but it was actually just the deployment delay."
+      "content": "Yesss... the error has solved, the error was in the yaml file which was creating new blogs instead of just adding date and time to the blogs. In my rush to see the blog, I overlooked the fact that GitHub takes some time to deploy and run changes. I mistakenly assumed that was part of the error but it was actually just the deployment delay.",
+      "date": "2025-03-30T12:04:36.834Z"
     }
   ]
 }
