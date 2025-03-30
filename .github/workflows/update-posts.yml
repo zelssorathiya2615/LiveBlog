@@ -1,4 +1,4 @@
-name: Update Blog Posts
+name: Update Blog Posts with Date
 
 on:
   push:
@@ -24,12 +24,15 @@ jobs:
             const path = require("path");
             const postsPath = path.join(__dirname, "blogs", "posts.json");
             const posts = JSON.parse(fs.readFileSync(postsPath, "utf8"));
-            const newPost = {
-              title: "New Blog Post",
-              content: "This is the content of the new blog post.",
-              date: new Date().toISOString()
-            };
-            posts.posts.push(newPost);
+
+            // Add date to posts without date
+            posts.posts = posts.posts.map(post => {
+              if (!post.date) {
+                post.date = new Date().toISOString();
+              }
+              return post;
+            });
+
             fs.writeFileSync(postsPath, JSON.stringify(posts, null, 2), "utf8");
           '
 
@@ -38,5 +41,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add blogs/posts.json
-          git commit -m "Add new blog post with current date and time" || exit 0
+          git commit -m "Automatically add date and time to new blog posts" || exit 0
           git push
