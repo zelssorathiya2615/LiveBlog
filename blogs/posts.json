@@ -7,7 +7,8 @@
     },
     {
       "title": "Error solvings",
-      "content": "I tried and the first blog appeared as it should be but the yaml file of the workflow of the githhub action was automatically adding a new blog after i add a blog so this is a error on which i am working on"
+      "content": "I tried and the first blog appeared as it should be but the yaml file of the workflow of the githhub action was automatically adding a new blog after i add a blog so this is a error on which i am working on",
+      "date": "2025-03-30T11:45:36.949Z"
     }
   ]
 }
