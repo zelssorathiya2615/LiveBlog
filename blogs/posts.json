@@ -2,17 +2,11 @@
     "posts": [
         {
             "title": "Blog 1",
-            "content": "This is the content of Blog 1.",
-            "date": "2025-03-30T08:00:00Z"
+            "content": "This is the content of Blog 1."
         },
         {
             "title": "Blog 2",
-            "content": "This is the content of Blog 2.",
-            "date": "2025-03-29T15:30:00Z"
-        },
-        {
-            "title": "Blog 3",
-            "content": "This is 3.",
+            "content": "This is the content of Blog 2."
         }
     ]
 }
