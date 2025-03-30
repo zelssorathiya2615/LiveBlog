@@ -1,12 +1,17 @@
 {
-    "posts": [
-        {
-            "title": "Blog 1",
-            "content": "This is the content of Blog 1."
-        },
-        {
-            "title": "Blog 2",
-            "content": "This is the content of Blog 2."
-        }
-    ]
+  "posts": [
+    {
+      "title": "Blog 1",
+      "content": "This is the content of Blog 1."
+    },
+    {
+      "title": "Blog 2",
+      "content": "This is the content of Blog 2."
+    },
+    {
+      "title": "New Blog Post",
+      "content": "This is the content of the new blog post.",
+      "date": "2025-03-30T11:11:56.984Z"
+    }
+  ]
 }
