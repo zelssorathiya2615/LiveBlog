@@ -4,6 +4,10 @@
       "title": "My First Blog",
       "content": "Hi! this is Zels Sorathiya starting out with blogging, studying in FY CSE in the present time, eager to learn and explore the vast world of the technology",
       "date": "2025-03-30T11:26:50.336Z"
+    },
+    {
+      "title": "Error solvings",
+      "content": "I tried and the first blog appeared as it should be but the yaml file of the workflow of the githhub action was automatically adding a new blog after i add a blog so this is a error on which i am working on"
     }
   ]
 }
