@@ -1,8 +1,13 @@
 {
-    "posts": [
-        {
-            "title": "My First Blog",
-            "content": "Hi! this is Zels Sorathiya starting out with blogging, studying in FY CSE in the present time, eager to learn and explore the vast world of the technology"
-        }    
-    ]
+  "posts": [
+    {
+      "title": "My First Blog",
+      "content": "Hi! this is Zels Sorathiya starting out with blogging, studying in FY CSE in the present time, eager to learn and explore the vast world of the technology"
+    },
+    {
+      "title": "New Blog Post",
+      "content": "This is the content of the new blog post.",
+      "date": "2025-03-30T11:26:50.336Z"
+    }
+  ]
 }
