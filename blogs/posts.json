@@ -11,6 +11,11 @@
     {
       "title": "New Blog Post",
       "content": "This is the content of the new blog post."
+    },
+    {
+      "title": "New Blog Post",
+      "content": "This is the content of the new blog post.",
+      "date": "2025-03-30T11:13:54.115Z"
     }
   ]
 }
