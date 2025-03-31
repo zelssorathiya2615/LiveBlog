@@ -1,15 +1,9 @@
 {
   "posts": [
-    
     {
       "title": "Checking time try 2",
       "content": "Try 2 for checking time, now I have tried to change and update the time zone both on display and json file so lets see is it working",
       "date": "2025-03-31T14:54:34+05:30"
-    },
-    {
-      "title": "Continuing",
-      "content": "Just now I have implemented the design but the time and date format has changed, so I am checking two things: date and time format and also whether the blog is getting posted or not.",
-      "date": "2025-03-31T09:28:43+05:30"
     },
     {
       "title": "Continuing",
@@ -25,6 +19,11 @@
       "title": "Checking",
       "content": "I haved solved the error of date formating but now I am checking whther this blog is getting posted or not and if posted whether the date and time are automatically generated. and also i have completed the task of filtering the blogs on the basis of year or month or any date. now lets check",
       "date": "2025-03-31T11:41:58+05:30"
+    },
+    {
+      "title": "Continuing",
+      "content": "Just now I have implemented the design but the time and date format has changed, so I am checking two things: date and time format and also whether the blog is getting posted or not.",
+      "date": "2025-03-31T09:28:43+05:30"
     },
     {
       "title": "Applying it",
