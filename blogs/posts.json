@@ -1,29 +1,14 @@
 {
   "posts": [
     {
-      "title": "My First Blog",
-      "content": "Hi! this is Zels Sorathiya starting out with blogging, studying in FY CSE in the present time, eager to learn and explore the vast world of the technology",
-      "date": "2025-03-30T16:56:50.336Z"
+      "title": "Continuing",
+      "content": "Just now I have implemented the design but the time and date format has changed, so I am checking two things: date and time format and also whether the blog is getting posted or not.",
+      "date": "2025-03-31T09:58:43.259Z"
     },
     {
-      "title": "Error solvings",
-      "content": "I tried and the first blog appeared as it should be but the yaml file of the workflow of the github action was automatically adding a new blog after I add a blog so this is an error on which I am working on",
-      "date": "2025-03-30T17:15:36.949Z"
-    },
-    {
-      "title": "Error Solved?",
-      "content": "Checking whether the error solved or not",
-      "date": "2025-03-30T17:20:20.329Z"
-    },
-    {
-      "title": "Error Solved...",
-      "content": "Yesss... the error has solved, the error was in the yaml file which was creating new blogs instead of just adding date and time to the blogs. In my rush to see the blog, I overlooked the fact that GitHub takes some time to deploy and run changes. I mistakenly assumed that was part of the error but it was actually just the deployment delay.",
-      "date": "2025-03-30T17:34:36.834Z"
-    },
-    {
-      "title": "Some Styling",
-      "content": "I have been working on styling for the ZBLOG for almost an hour now, and I have come up with some nice designs. Taking a break after working non-stop for 2 hours and 39 minutes (yes, I have been keeping track with a stopwatch 😁).",
-      "date": "2025-03-30T18:32:19.028Z"
+      "title": "Checking",
+      "content": "I haved solved the error of date formating but now I am checking whther this blog is getting posted or not and if posted whether the date and time are automatically generated. and also i have completed the task of filtering the blogs on the basis of year or month or any date. now lets check",
+      "date": "2025-03-31T06:11:58.473Z"
     },
     {
       "title": "Applying it",
@@ -31,13 +16,29 @@
       "date": "2025-03-30T23:06:15.023Z"
     },
     {
-      "title": "Continuing",
-      "content": "Just now I have implemented the design but the time and date format has changed, so I am checking two things: date and time format and also whether the blog is getting posted or not.",
-      "date": "2025-03-31T09:58:43.259Z"
+      "title": "Some Styling",
+      "content": "I have been working on styling for the ZBLOG for almost an hour now, and I have come up with some nice designs. Taking a break after working non-stop for 2 hours and 39 minutes (yes, I have been keeping track with a stopwatch 😁).",
+      "date": "2025-03-30T18:32:19.028Z"
     },
     {
-      "title": "Checking",
-      "content": "I haved solved the error of date formating but now I am checking whther this blog is getting posted or not and if posted whether the date and time are automatically generated. and also i have completed the task of filtering the blogs on the basis of year or month or any date. now lets check"
+      "title": "Error Solved...",
+      "content": "Yesss... the error has solved, the error was in the yaml file which was creating new blogs instead of just adding date and time to the blogs. In my rush to see the blog, I overlooked the fact that GitHub takes some time to deploy and run changes. I mistakenly assumed that was part of the error but it was actually just the deployment delay.",
+      "date": "2025-03-30T17:34:36.834Z"
+    },
+    {
+      "title": "Error Solved?",
+      "content": "Checking whether the error solved or not",
+      "date": "2025-03-30T17:20:20.329Z"
+    },
+    {
+      "title": "Error solvings",
+      "content": "I tried and the first blog appeared as it should be but the yaml file of the workflow of the github action was automatically adding a new blog after I add a blog so this is an error on which I am working on",
+      "date": "2025-03-30T17:15:36.949Z"
+    },
+    {
+      "title": "My First Blog",
+      "content": "Hi! this is Zels Sorathiya starting out with blogging, studying in FY CSE in the present time, eager to learn and explore the vast world of the technology",
+      "date": "2025-03-30T16:56:50.336Z"
     }
   ]
 }
