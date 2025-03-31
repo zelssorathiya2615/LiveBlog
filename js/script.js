@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const month = (date.getMonth() + 1).toLocaleString('en-US', { month: 'short' });
         const day = date.getDate().toLocaleString('en-US', { style: 'ordinal' });
         const year = date.getFullYear();
-        const hours = date.getHours().toString().padStart('0', '0');
-        const minutes = date.getMinutes().toString().padStart('0', '0');
+        const hours = date.getHours() % 12 || 12; // Convert to 12-hour format
+        const minutes = date.getMinutes().toString().padStart(2, '0');
         const ampm = date.getHours() >= 12 ? 'PM' : 'AM';
-        return `${month} ${day}th, ${year} at ${hours}:${minutes} ${ampm}`;
+        return `${month}. ${day}, ${year} at ${hours}:${minutes} ${ampm}`;
     }
 
     function filterPosts() {
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('blogs/posts.json')
         .then(response => response.json())
         .then(data => {
-            posts = data.posts.sort(((a, b) => new Date(b.date) - new Date(a.date)));
+            posts = data.posts.sort((a, b) => new Date(b.date) - new Date(a.date));
             renderPosts(posts);
         })
         .catch(error => console.error('Error loading blog posts:', error));
