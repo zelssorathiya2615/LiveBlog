@@ -2,7 +2,8 @@
   "posts": [
     {
       "title": "Checking time try 2",
-      "content": "Try 2 for checking time, now I have tried to change and update the time zone both on display and json file so lets see is it working"
+      "content": "Try 2 for checking time, now I have tried to change and update the time zone both on display and json file so lets see is it working",
+      "date": "2025-03-31T14:54:34+05:30"
     },
     {
       "title": "Continuing",
