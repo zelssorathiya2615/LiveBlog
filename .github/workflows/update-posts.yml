@@ -3,7 +3,7 @@ name: Update Blog Posts with Date
 on:
   push:
     paths:
-      - 'blogs/posts.json' # Adjust the path if posts.json is located in a different directory
+      - 'blogs/posts.json'
 
 jobs:
   update-posts:
@@ -22,24 +22,18 @@ jobs:
           node -e '
             const fs = require("fs");
             const path = require("path");
-            // Update the path to your posts.json file
             const postsPath = path.join(__dirname, "blogs/posts.json");
             const posts = JSON.parse(fs.readFileSync(postsPath, "utf8"));
 
-            // Add date to posts without date
-            posts.posts = posts.posts.map((post) => {
+            posts.posts = posts.posts.map(post => {
               if (!post.date) {
                 const now = new Date();
-                const month = now.toLocaleString("en-US", { month: "short" });
-                const day = now.getDate().toLocaleString("en-US", { style: "ordinal" });
-                const year = now.getFullYear();
-                const hours = now.getHours() % 12 || 12; // Convert to 12-hour format
-                const minutes = now.getMinutes().toString().padStart(2, "0");
-                const ampm = now.getHours() >= 12 ? "PM" : "AM";
-                post.date = `${month}. ${day}, ${year} at ${hours}:${minutes} ${ampm}`;
+                post.date = now.toISOString(); // ISO 8601 format
               }
               return post;
             });
+
+            posts.posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
             fs.writeFileSync(postsPath, JSON.stringify(posts, null, 2), "utf8");
           '
@@ -48,6 +42,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add blogs/posts.json # Update the path if necessary
+          git add blogs/posts.json
           git commit -m "Automatically add date and time to new blog posts" || exit 0
           git push
