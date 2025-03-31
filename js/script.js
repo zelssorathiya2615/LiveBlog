@@ -22,10 +22,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function formatDate(dateString) {
         const date = new Date(dateString);
-        const month = (date.getMonth() + 1).toString().padStart('0', '0');
-        const day = date.getDate().toString().padStart('0', '0');
+        const month = (date.getMonth() + 1).toLocaleString('en-US', { month: 'short' });
+        const day = date.getDate().toLocaleString('en-US', { style: 'ordinal' });
         const year = date.getFullYear();
-        return `${month}.${day}${day}th, ${year} at ${date.toTimeString().split(' ')[0]}`;
+        const hours = date.getHours().toString().padStart('0', '0');
+        const minutes = date.getMinutes().toString().padStart('0', '0');
+        const ampm = date.getHours() >= 12 ? 'PM' : 'AM';
+        return `${month} ${day}th, ${year} at ${hours}:${minutes} ${ampm}`;
     }
 
     function filterPosts() {
@@ -41,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             filteredPosts = filteredPosts.filter(post => post.content.toLowerCase().includes(content));
         }
         if (dateValue) {
-            filteredPosts = filteredPosts.filter(post => post.date.split('-')[0] === dateValue);
+            filteredPosts = filteredPosts.filter(post => formatDate(post.date).includes(dateValue));
         }
 
         renderPosts(filteredPosts);
@@ -51,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     searchContent.addEventListener('input', filterPosts);
     searchDate.addEventListener('change', filterPosts);
 
-    fetch('blogs/posts.json')
+    fetch('posts.json')
         .then(response => response.json())
         .then(data => {
             posts = data.posts.sort(((a, b) => new Date(b.date) - new Date(a.date)));
