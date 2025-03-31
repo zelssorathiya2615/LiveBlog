@@ -24,10 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const date = new Date(dateString);
         if (isNaN(date)) return 'Invalid date';
     
-        // Convert to IST
         const options = { timeZone: 'Asia/Kolkata', timeZoneName: 'short' };
-        const month = date.toLocaleString('en-IN', { month: 'short', timeZone: 'Asia/Kolkata' }); // Mar
-        const day = date.getUTCDate();
+        const month = date.toLocaleString('en-IN', { month: 'short', timeZone: 'Asia/Kolkata' }); 
+        const day = date.getDate(); // Use local date (IST)
         const ordinalSuffix = (n) => {
             if (n > 3 && n < 21) return 'th';
             switch (n % 10) {
@@ -37,10 +36,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 default: return 'th';
             }
         };
-        const dayWithSuffix = `${day}${ordinalSuffix(day)}`; // 31st
-        const year = date.getUTCFullYear();
+        const dayWithSuffix = `${day}${ordinalSuffix(day)}`; 
+        const year = date.getFullYear(); 
+    
         const hours = date.toLocaleString('en-IN', { hour: '2-digit', hour12: true, timeZone: 'Asia/Kolkata' }).split(' ')[0];
-        const minutes = date.getUTCMinutes().toString().padStart(2, '0');
+        const minutes = date.getMinutes().toString().padStart(2, '0');
         const ampm = date.toLocaleString('en-IN', { hour: '2-digit', hour12: true, timeZone: 'Asia/Kolkata' }).split(' ')[1];
     
         return `${month}. ${dayWithSuffix}, ${year} at ${hours}:${minutes} ${ampm}`;
