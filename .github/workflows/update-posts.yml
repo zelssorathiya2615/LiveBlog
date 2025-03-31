@@ -29,7 +29,14 @@ jobs:
             // Add date to posts without date
             posts.posts = posts.posts.map((post) => {
               if (!post.date) {
-                post.date = new Date().toISOString();
+                const now = new Date();
+                const month = now.toLocaleString("en-US", { month: "short" });
+                const day = now.getDate().toLocaleString("en-US", { style: "ordinal" });
+                const year = now.getFullYear();
+                const hours = now.getHours() % 12 || 12; // Convert to 12-hour format
+                const minutes = now.getMinutes().toString().padStart(2, "0");
+                const ampm = now.getHours() >= 12 ? "PM" : "AM";
+                post.date = `${month}. ${day}, ${year} at ${hours}:${minutes} ${ampm}`;
               }
               return post;
             });
