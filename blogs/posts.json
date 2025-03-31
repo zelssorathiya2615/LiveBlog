@@ -1,59 +1,59 @@
 {
   "posts": [
     {
-      "title": "Continuing",
-      "content": "Just now I have implemented the design but the time and date format has changed, so I am checking two things: date and time format and also whether the blog is getting posted or not.",
-      "date": "2025-03-31T09:58:43.259Z"
-    },
-    {
       "title": "Checking time try 2",
       "content": "Try 2 for checking time, now i have tried to change and update the time zone both on display and json file so lets see is it working",
-      "date": "2025-03-31T14:43:52+05:30"
+      "date": "2025-03-31T20:13:52+05:30"
+    },
+    {
+      "title": "Continuing",
+      "content": "Just now I have implemented the design but the time and date format has changed, so I am checking two things: date and time format and also whether the blog is getting posted or not.",
+      "date": "2025-03-31T14:28:43+05:30"
     },
     {
       "title": "Checking time",
       "content": "Now again checking for time, the error was regarding using UTC time Zone and I am in IST time zone",
-      "date": "2025-03-31T08:34:22.761Z"
+      "date": "2025-03-31T13:04:22+05:30"
     },
     {
       "title": "Continuing",
       "content": "the blog is getting posted with proper date and time format but the time is incorrect due to which the post \"checking\" is not in the correct order of uploaded. so seeing whether the error is still there",
-      "date": "2025-03-31T08:25:18.091Z"
+      "date": "2025-03-31T13:55:18+05:30"
     },
     {
       "title": "Checking",
       "content": "I haved solved the error of date formating but now I am checking whther this blog is getting posted or not and if posted whether the date and time are automatically generated. and also i have completed the task of filtering the blogs on the basis of year or month or any date. now lets check",
-      "date": "2025-03-31T06:11:58.473Z"
+      "date": "2025-03-31T11:41:58+05:30"
     },
     {
       "title": "Applying it",
       "content": "I am trying to implement the design that I made and checking whether the blog list is working or not.",
-      "date": "2025-03-30T23:06:15.023Z"
+      "date": "2025-03-30T23:06:15+05:30"
     },
     {
       "title": "Some Styling",
       "content": "I have been working on styling for the ZBLOG for almost an hour now, and I have come up with some nice designs. Taking a break after working non-stop for 2 hours and 39 minutes (yes, I have been keeping track with a stopwatch 😁).",
-      "date": "2025-03-30T18:32:19.028Z"
+      "date": "2025-03-30T18:32:19+05:30"
     },
     {
       "title": "Error Solved...",
       "content": "Yesss... the error has solved, the error was in the yaml file which was creating new blogs instead of just adding date and time to the blogs. In my rush to see the blog, I overlooked the fact that GitHub takes some time to deploy and run changes. I mistakenly assumed that was part of the error but it was actually just the deployment delay.",
-      "date": "2025-03-30T17:34:36.834Z"
+      "date": "2025-03-30T17:34:36+05:30"
     },
     {
       "title": "Error Solved?",
       "content": "Checking whether the error solved or not",
-      "date": "2025-03-30T17:20:20.329Z"
+      "date": "2025-03-30T17:20:20+05:30"
     },
     {
       "title": "Error solvings",
       "content": "I tried and the first blog appeared as it should be but the yaml file of the workflow of the github action was automatically adding a new blog after I add a blog so this is an error on which I am working on",
-      "date": "2025-03-30T17:15:36.949Z"
+      "date": "2025-03-30T17:15:36+05:30"
     },
     {
       "title": "My First Blog",
       "content": "Hi! this is Zels Sorathiya starting out with blogging, studying in FY CSE in the present time, eager to learn and explore the vast world of the technology",
-      "date": "2025-03-30T16:56:50.336Z"
+      "date": "2025-03-30T16:56:50+05:30"
     }
   ]
 }
