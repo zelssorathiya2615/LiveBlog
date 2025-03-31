@@ -27,9 +27,13 @@ jobs:
 
             posts.posts = posts.posts.map(post => {
               if (!post.date) {
-                const now = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
-                const istDate = new Date(now);
-                post.date = istDate.toISOString();
+                const now = new Date();
+                const istOffset = 5.5 * 60 * 60 * 1000; // IST offset in ms
+                const istDate = new Date(now.getTime() + istOffset);
+
+                // Format date to IST (+05:30)
+                const isoString = istDate.toISOString().slice(0, 19) + "+05:30";
+                post.date = isoString;
               }
               return post;
             });
