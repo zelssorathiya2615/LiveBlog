@@ -24,7 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const date = new Date(dateString);
         if (isNaN(date)) return 'Invalid date';
     
-        const month = date.toLocaleString('en-US', { month: 'short' }); // Mar
+        // Convert to IST
+        const options = { timeZone: 'Asia/Kolkata', timeZoneName: 'short' };
+        const month = date.toLocaleString('en-IN', { month: 'short', timeZone: 'Asia/Kolkata' }); // Mar
         const day = date.getUTCDate();
         const ordinalSuffix = (n) => {
             if (n > 3 && n < 21) return 'th';
@@ -37,9 +39,9 @@ document.addEventListener('DOMContentLoaded', function () {
         };
         const dayWithSuffix = `${day}${ordinalSuffix(day)}`; // 31st
         const year = date.getUTCFullYear();
-        const hours = date.getUTCHours() % 12 || 12;
+        const hours = date.toLocaleString('en-IN', { hour: '2-digit', hour12: true, timeZone: 'Asia/Kolkata' }).split(' ')[0];
         const minutes = date.getUTCMinutes().toString().padStart(2, '0');
-        const ampm = date.getUTCHours() >= 12 ? 'PM' : 'AM';
+        const ampm = date.toLocaleString('en-IN', { hour: '2-digit', hour12: true, timeZone: 'Asia/Kolkata' }).split(' ')[1];
     
         return `${month}. ${dayWithSuffix}, ${year} at ${hours}:${minutes} ${ampm}`;
     }
