@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     searchContent.addEventListener('input', filterPosts);
     searchDate.addEventListener('change', filterPosts);
 
-    fetch('posts.json')
+    fetch('blogs/posts.json')
         .then(response => response.json())
         .then(data => {
             posts = data.posts.sort(((a, b) => new Date(b.date) - new Date(a.date)));
