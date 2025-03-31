@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function formatDate(dateString) {
         const date = new Date(dateString);
         if (isNaN(date)) return 'Invalid date';
-
-        const month = date.toLocaleString('en-US', { month: 'short', timeZone: 'UTC' });
+    
+        const month = date.toLocaleString('en-US', { month: 'short' }); // Mar
         const day = date.getUTCDate();
         const ordinalSuffix = (n) => {
             if (n > 3 && n < 21) return 'th';
@@ -35,15 +35,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 default: return 'th';
             }
         };
-        const dayWithSuffix = `${day}${ordinalSuffix(day)}`;
+        const dayWithSuffix = `${day}${ordinalSuffix(day)}`; // 31st
         const year = date.getUTCFullYear();
         const hours = date.getUTCHours() % 12 || 12;
         const minutes = date.getUTCMinutes().toString().padStart(2, '0');
         const ampm = date.getUTCHours() >= 12 ? 'PM' : 'AM';
-
+    
         return `${month}. ${dayWithSuffix}, ${year} at ${hours}:${minutes} ${ampm}`;
     }
-
+    
     function filterPosts() {
         let filteredPosts = posts;
         const title = searchTitle.value.toLowerCase();
