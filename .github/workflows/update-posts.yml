@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Update posts.json with current date and time
+      - name: Update posts.json with current date and time in IST
         run: |
           node -e '
             const fs = require("fs");
@@ -27,8 +27,9 @@ jobs:
 
             posts.posts = posts.posts.map(post => {
               if (!post.date) {
-                const now = new Date();
-                post.date = now.toISOString(); // ISO 8601 format
+                const now = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+                const istDate = new Date(now);
+                post.date = istDate.toISOString();
               }
               return post;
             });
@@ -43,5 +44,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add blogs/posts.json
-          git commit -m "Automatically add date and time to new blog posts" || exit 0
+          git commit -m "Automatically add date and time to new blog posts in IST" || exit 0
           git push
