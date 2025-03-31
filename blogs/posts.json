@@ -11,14 +11,14 @@
       "date": "2025-03-31T14:28:43+05:30"
     },
     {
-      "title": "Checking time",
-      "content": "Now again checking for time, the error was regarding using UTC time Zone and I am in IST time zone",
-      "date": "2025-03-31T13:04:22+05:30"
-    },
-    {
       "title": "Continuing",
       "content": "the blog is getting posted with proper date and time format but the time is incorrect due to which the post \"checking\" is not in the correct order of uploaded. so seeing whether the error is still there",
       "date": "2025-03-31T13:55:18+05:30"
+    },
+    {
+      "title": "Checking time",
+      "content": "Now again checking for time, the error was regarding using UTC time Zone and I am in IST time zone",
+      "date": "2025-03-31T13:04:22+05:30"
     },
     {
       "title": "Checking",
