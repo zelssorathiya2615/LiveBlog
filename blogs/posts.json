@@ -1,13 +1,14 @@
 {
   "posts": [
     {
-      "title": "Checking time try 2",
-      "content": "Try 2 for checking time, now i have tried to change and update the time zone both on display and json file so lets see is it working"
-    },
-    {
       "title": "Continuing",
       "content": "Just now I have implemented the design but the time and date format has changed, so I am checking two things: date and time format and also whether the blog is getting posted or not.",
       "date": "2025-03-31T09:58:43.259Z"
+    },
+    {
+      "title": "Checking time try 2",
+      "content": "Try 2 for checking time, now i have tried to change and update the time zone both on display and json file so lets see is it working",
+      "date": "2025-03-31T14:43:52+05:30"
     },
     {
       "title": "Checking time",
