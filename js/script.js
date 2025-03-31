@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const blogList = document.getElementById('blog-list');
     const searchTitle = document.getElementById('search-title');
     const searchContent = document.getElementById('search-content');
@@ -22,13 +22,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function formatDate(dateString) {
         const date = new Date(dateString);
-        const month = (date.getMonth() + 1).toLocaleString('en-US', { month: 'short' });
-        const day = date.getDate().toLocaleString('en-US', { style: 'ordinal' });
-        const year = date.getFullYear();
-        const hours = date.getHours() % 12 || 12; // Convert to 12-hour format
-        const minutes = date.getMinutes().toString().padStart(2, '0');
-        const ampm = date.getHours() >= 12 ? 'PM' : 'AM';
-        return `${month}. ${day}, ${year} at ${hours}:${minutes} ${ampm}`;
+        if (isNaN(date)) return 'Invalid date';
+
+        const month = date.toLocaleString('en-US', { month: 'short', timeZone: 'UTC' });
+        const day = date.getUTCDate();
+        const ordinalSuffix = (n) => {
+            if (n > 3 && n < 21) return 'th';
+            switch (n % 10) {
+                case 1: return 'st';
+                case 2: return 'nd';
+                case 3: return 'rd';
+                default: return 'th';
+            }
+        };
+        const dayWithSuffix = `${day}${ordinalSuffix(day)}`;
+        const year = date.getUTCFullYear();
+        const hours = date.getUTCHours() % 12 || 12;
+        const minutes = date.getUTCMinutes().toString().padStart(2, '0');
+        const ampm = date.getUTCHours() >= 12 ? 'PM' : 'AM';
+
+        return `${month}. ${dayWithSuffix}, ${year} at ${hours}:${minutes} ${ampm}`;
     }
 
     function filterPosts() {
@@ -44,7 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
             filteredPosts = filteredPosts.filter(post => post.content.toLowerCase().includes(content));
         }
         if (dateValue) {
-            filteredPosts = filteredPosts.filter(post => formatDate(post.date).includes(dateValue));
+            // Filter by matching date (ignoring time)
+            filteredPosts = filteredPosts.filter(post => {
+                const postDate = new Date(post.date).toISOString().split('T')[0];
+                return postDate === dateValue;
+            });
         }
 
         renderPosts(filteredPosts);
