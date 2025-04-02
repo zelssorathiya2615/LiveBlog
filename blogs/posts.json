@@ -2,7 +2,8 @@
   "posts": [
     {
       "title": "Design Update",
-        "content": "I have completed the task of merging the two search bars and also i have completed the toggle functionality for both dark and light mode."
+      "content": "I have completed the task of merging the two search bars and also i have completed the toggle functionality for both dark and light mode.",
+      "date": "2025-04-02T23:31:43+05:30"
     },
     {
       "title": "More Designing",
